@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Web Paint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="dropdown-menu" id="file-menu">
+            <div class="label">File</div>
+            <div class="element">Save</div>
+            <div class="element">Export</div>
+            <div class="element">Share</div>
+        </div>
+        <div class="dropdown-menu" id="options-menu">
+            <div class="label">Canvas</div>
+            <div class="element" id="clearButton">Clear</div>
+            <div class="element">Background</div>
+            <div class="element">Generate</div>
+        </div>
+        <div class="dropdown-menu" id="color-menu">
+            <div class="label" id="colorPickerButton">
+                <input id="colorPickerInput" type="color">
+                <label id="colorPickerLabel" for="colorPickerInput">Color</label>
+            </div>
+            <div class="element colorButton" id="redButton" colorValue="red">red</div>
+            <div class="element colorButton" id="greenButton" colorValue="green">green</div>
+            <div class="element colorButton" id="blueButton" colorValue="blue">blue</div>
+        </div>
+    </div>
+
+    <div class="canvas"></div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

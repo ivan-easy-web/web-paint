@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: auto;
+}
+
+.menu-container {
+    position: fixed;
+}
+
+.dropdown-menu {
+    margin: 10px 5px;
+    background-color: rgba(49, 14, 58, 0.747);
+    width: fit-content;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 0px 20px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.dropdown-menu .element, .label {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown-menu .label {
+    cursor: default;
+}
+
+.dropdown-menu .element {
+    display: none;
+}
+
+.dropdown-menu .element:hover {
+    transform: scale(1.2);
+    background: rgb(204, 109, 31);
+    color: black;
+    border-radius: 20px;
+    transition: 0.1s ease-in;
+}
+
+.dropdown-menu:hover .element{
+    display: flex;
+}
+
+#redButton {
+    background-color: red;
+    color: white;
+}
+
+#greenButton {
+    background-color: green;
+    color: white;
+}
+
+#blueButton {
+    background-color: blue;
+    color: white;
+}
+
+.canvas {
+    overflow: auto;
+    width: fit-content;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pixel {
+    height: 8px;
+    width: 8px;
+    background-color: white;
+}
+
+.pixelBackground {
+    padding: 0.5px;
+    background-color: lightgray;
+}
+
+#colorPickerInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+#colorPickerButton {
+    cursor: pointer;
+}
+
+#colorPickerLabel {
+    cursor: pointer;
+}
