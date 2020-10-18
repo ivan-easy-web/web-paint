@@ -5,11 +5,11 @@ function setCurrentColor(color) {
 }
 
 
-for (let i = 0; i < 110; i++) {
+for (let i = 0; i < 120; i++) {
     let row = document.createElement('div');
     row.className = 'row';
 
-    for (let i = 0; i < 210; i++) {
+    for (let i = 0; i < 230; i++) {
         let pixel = document.createElement('div');
         let pixelBackground = document.createElement('div');
         pixel.className = 'pixel';
