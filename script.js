@@ -52,8 +52,37 @@ document.querySelector('#colorPickerInput').addEventListener('input', function(e
     setCurrentColor(event.target.value);
 })
 
-document.querySelector('#clearButton').addEventListener('click', function(event) {
+function setBackgroundColor(color) {
     for (let pixel of document.getElementsByClassName('pixel')) {
-        pixel.style.backgroundColor = 'white';
+        pixel.style.backgroundColor = color;
+    }
+}
+
+document.querySelector('#clearButton').addEventListener('click', function(event) {
+    document.querySelector('#wait-text').style.display = 'inline';
+    setBackgroundColor('white');
+    document.querySelector('#wait-text').style.display = 'none';
+})
+
+document.querySelector('#backgroundColorPickerInput').addEventListener('change', function(event) {
+    setBackgroundColor(event.target.value);
+})
+
+document.querySelector('#backgroundColorPickerInput').addEventListener('input', function(event) {
+    setBackgroundColor(event.target.value);
+})
+
+window.addEventListener('mousedown', function(event) {
+    if (!document.querySelector('#menu-container').contains(event.target)) {
+        document.querySelector('#menu-container').classList.remove('menu-container-shown');
+        document.querySelector('#menu-container').classList.add('menu-container-hidden');
+    }
+    
+})
+
+window.addEventListener('mouseup', function(event) {
+    if (!document.querySelector('#menu-container').contains(event.target)) {
+        document.querySelector('#menu-container').classList.remove('menu-container-hidden');
+        document.querySelector('#menu-container').classList.add('menu-container-shown');
     }
 })

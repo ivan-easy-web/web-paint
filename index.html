@@ -8,28 +8,35 @@
 </head>
 
 <body>
-    <div class="menu-container">
+    
+    <div class="menu-container" id="menu-container">
         <div class="dropdown-menu" id="file-menu">
             <div class="label">File</div>
-            <div class="element">Save</div>
-            <div class="element">Export</div>
-            <div class="element">Share</div>
+            <div class="element button">Save</div>
+            <div class="element button">Export</div>
+            <div class="element button">Share</div>
         </div>
         <div class="dropdown-menu" id="options-menu">
-            <div class="label">Canvas</div>
-            <div class="element" id="clearButton">Clear</div>
-            <div class="element">Background</div>
-            <div class="element">Generate</div>
+            <div class="label button" class="colorPicker">
+                <input id="backgroundColorPickerInput" class="colorPickerInput" type="color">
+                <label id="backgroundColorPickerLabel" class="colorPickerLabel" for="backgroundColorPickerInput">Background</label>
+            </div>
+            <div class="element button" id="clearButton">Clear</div>
+            <div class="element button">Generate</div>
         </div>
         <div class="dropdown-menu" id="color-menu">
-            <div class="label" id="colorPickerButton">
-                <input id="colorPickerInput" type="color">
-                <label id="colorPickerLabel" for="colorPickerInput">Color</label>
+            <div class="label button" class="colorPickerButton">
+                <input id="colorPickerInput" class="colorPickerInput" type="color">
+                <label id="colorPickerLabel" class="colorPickerLabel" for="colorPickerInput">Color</label>
             </div>
-            <div class="element colorButton" id="redButton" colorValue="red">red</div>
-            <div class="element colorButton" id="greenButton" colorValue="green">green</div>
-            <div class="element colorButton" id="blueButton" colorValue="blue">blue</div>
+            <div class="element colorButton button" id="redButton" colorValue="red">red</div>
+            <div class="element colorButton button" id="greenButton" colorValue="green">green</div>
+            <div class="element colorButton button" id="blueButton" colorValue="blue">blue</div>
         </div>
+    </div>
+
+    <div id="wait-text">
+        Wait...
     </div>
 
     <div class="canvas"></div>

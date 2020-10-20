@@ -6,8 +6,40 @@ body {
     overflow: hidden;
 }
 
+#wait-text {
+    display: none;
+    position: fixed;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    line-height: 100vh;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    font-size: xx-large;
+    color:  rgba(49, 14, 58, 0.747);
+}
+
 .menu-container {
     position: fixed;
+}
+
+.menu-container-hidden {
+    display: none;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu-container-shown {
+    animation: show 0.5s;
+    display: block;
 }
 
 .dropdown-menu {
@@ -36,7 +68,7 @@ body {
     display: none;
 }
 
-.dropdown-menu .element:hover {
+.dropdown-menu .button:hover {
     transform: scale(1.2);
     background: rgb(204, 109, 31);
     color: black;
@@ -85,7 +117,7 @@ body {
     background-color: lightgray;
 }
 
-#colorPickerInput {
+.colorPickerInput {
     opacity: 0;
     width: 0;
     height: 0;
@@ -93,10 +125,10 @@ body {
     cursor: pointer;
 }
 
-#colorPickerButton {
+.colorPickerButton {
     cursor: pointer;
 }
 
-#colorPickerLabel {
+.colorPickerLabel {
     cursor: pointer;
 }
